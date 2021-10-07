@@ -5,7 +5,7 @@ FROM quay.io/ocpmetal/openshift-installer
 FROM quay.io/ocpmetal/assisted-service:latest AS inventory
 
 
-FROM centos:8
+FROM stream:8
 RUN dnf install -y libvirt-libs python3 findutils wget && \
    yum clean all && \
    rm -rf /var/cache/yum
